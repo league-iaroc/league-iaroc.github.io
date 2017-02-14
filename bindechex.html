@@ -73,8 +73,15 @@
   
   <script>
     function checkAnswers(){
-      var q1 = document.getElementById("q1");
-      q1.style.backgroundColor = "red";
+      for(var i = 0; i < 30; i++){
+        var id = "q" + (i + 1); 
+        var q = document.getElementById(id);
+        if(q.value != "9"){
+          q.style.backgroundColor = "red";
+        }else{
+          q.style.backgroundColor = "green";
+        }
+      }
     }
   </script>
   
