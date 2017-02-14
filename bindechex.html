@@ -13,6 +13,7 @@
   <h1>Unit Conversion Exercises</h1>
   <h3>
     Solve all the conversions by hand.<br>
+    All binary answers start with the most signifcant 1.<br>
     *DO NOT USE A CALCULATOR OR THE INTERNET!*
   </h3>
   
@@ -73,10 +74,47 @@
   
   <script>
     function checkAnswers(){
+      var answers[30];
+      answers[0] = "9";
+      answers[1] = "21";
+      answers[2] = "53";
+      answers[3] = "127";
+      answers[4] = "4369";
+      
+      answers[5] = "1000";
+      answers[6] = "11010";
+      answers[7] = "1100100";
+      answers[8] = "100000000";
+      answers[9] = "110010000011110001";
+      
+      answers[10] = "8";
+      answers[11] = "A";
+      answers[12] = "200";
+      answers[13] = "18A92";
+      answers[14] = "845FED";
+      
+      answers[15] = "4097";
+      answers[16] = "2730";
+      answers[17] = "979542";
+      answers[18] = "4132";
+      answers[19] = "11259375";
+      
+      answers[20] = "5";
+      answers[21] = "55";
+      answers[22] = "5B";
+      answers[23] = "E7";
+      answers[24] = "B3598B";
+      
+      answers[25] = "1001101";
+      answers[26] = "11110111100";
+      answers[27] = "10000001001000";
+      answers[28] = "111111101101110010111010";
+      answers[29] = "11111001011100011110101001100";
+      
       for(var i = 0; i < 30; i++){
         var id = "q" + (i + 1); 
         var q = document.getElementById(id);
-        if(q.value != "9"){
+        if(q.value.toUpperCase() != answer[i]){
           q.style.backgroundColor = "red";
         }else{
           q.style.backgroundColor = "green";
